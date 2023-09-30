@@ -1,0 +1,56 @@
+import discord
+from bot_pass import gen_pass
+from random import choice
+from discord.ext import commands
+
+intents = discord.Intents.default()
+
+intents.message_content = True
+
+bott = discord.Bot(command_prefix='/', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Привет! Я бот {bot.user}!')
+
+@bot.command()
+async def heh(ctx, count_heh = 5):
+    await ctx.send("he" * count_heh)
+
+
+#генератор паролей
+@bot.command
+async def password(ctx, length = 5)
+    await ctx.send(gen_pass(length))
+bot.run(""MTE1MjkwMTA5Mzg0MDM5MjIzMg.GTzEvY.VM__6k1tkBeizMt2siTgZPL2HQZF6nQaP3YROo"")
+
+
+
+#эмодзи
+from .asset import Asset
+from . import utils
+from .user import User
+from .emoji import Emoji
+@bot.command
+async def (pass_context=True)
+async def ping(ctx):
+    msg = "Pong :CustomEmoji: {0.author.mention}".format(ctx.message)
+    await bot.say(msg)
+    class PartialEmoji:
+        @@ -164,8 +165,11 @@ class Emoji:
+            guild_id: :class:`int`
+            user: Optional[:class:`User`]
+            __slots__ = ('require_colons', 'animated', 'managed', 'id', 'name', '_roles', 'guild_id',
+                        '_state', 'user')
+        @@ -179,6 +183,8 @@ def _from_data(self, emoji):
+        self.name = emoji['name']
+        self.animated = emoji.get('animated', False)
+        self._roles = utils.SnowflakeList(map(int, emoji.get('roles', [])))
+        user = emoji.get('user')
+        self.user = User(state=self._state, data=user) if user else None
+     def __init__(self, *, guild, state, data):
+        self.guild_id = guild.id
