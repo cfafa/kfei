@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 
 intents.message_content = True
 
-bott = discord.Bot(command_prefix='/', intents=intents)
+bot = discord.Bot(command_prefix='/', intents=intents)
 
 @bot.event
 async def on_ready():
@@ -30,7 +30,6 @@ async def heh(ctx, count_heh = 5):
 @bot.command
 async def password(ctx, length = 5)
     await ctx.send(gen_pass(length))
-bot.run(""token"")
 
 
 
@@ -54,3 +53,6 @@ async def ping(ctx):
         self.user = User(state=self._state, data=user) if user else None
      def __init__(self, *, guild, state, data):
         self.guild_id = guild.id
+
+bot.run(""token"")
+
