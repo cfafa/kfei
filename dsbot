@@ -2,6 +2,10 @@ import discord
 from bot_pass import gen_pass
 from random import choice
 from discord.ext import commands
+from .asset import Asset
+from . import utils
+from .user import User
+from .emoji import Emoji
 
 intents = discord.Intents.default()
 
@@ -26,15 +30,11 @@ async def heh(ctx, count_heh = 5):
 @bot.command
 async def password(ctx, length = 5)
     await ctx.send(gen_pass(length))
-bot.run(""MTE1MjkwMTA5Mzg0MDM5MjIzMg.GTzEvY.VM__6k1tkBeizMt2siTgZPL2HQZF6nQaP3YROo"")
+bot.run(""token"")
 
 
 
 #эмодзи
-from .asset import Asset
-from . import utils
-from .user import User
-from .emoji import Emoji
 @bot.command
 async def (pass_context=True)
 async def ping(ctx):
