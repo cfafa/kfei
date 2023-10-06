@@ -53,4 +53,4 @@ async def mem(ctx):
     await ctx.send(file=picture)
 
 
-bot.run("MTE1MjkwMTA5Mzg0MDM5MjIzMg.G9mx7v.A3ixiI2w48RHpst_94jx0fQe8H0MTqbdiM0410")
+bot.run("token")
