@@ -37,7 +37,7 @@ async def on_member_join(self, member):
         await guild.system_channel.send(to_send)
 
 
-@bot.command()
+
 
 
 @bot.command
