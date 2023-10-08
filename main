@@ -70,4 +70,4 @@ async def mem(ctx):
     premium_mem = random.randint(5,7)
     with open(f'images/{premium_mem}', 'rb') as f:
         picture = discord.File(f)
-bot.run("MTE1MjkwMTA5Mzg0MDM5MjIzMg.G9mx7v.A3ixiI2w48RHpst_94jx0fQe8H0MTqbdiM0410")
+bot.run("token")
